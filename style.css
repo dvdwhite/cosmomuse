@@ -1330,11 +1330,84 @@ a {
     margin: 0;
 }
 
+.social-single {
+    margin: 0 auto;
+    font-size: 12px;
+    font-family: 'BrandonGrotesque-Regular';
+}
 
 .content-column {
     padding:10px 6px;
 }
 
+#comments {
+    font-family: 'BrandonGrotesque-Regular';
+}
+
+#comments h2 {
+    font-size: 32px;
+}
+
+#comments h3 {
+    font-size: 30px;
+    font-family: 'RawengulkRegular';
+    margin-top: 0;
+}
+
+#comments ol {
+    margin: 0 3em 1.5em 1em;
+    list-style-type: none;
+}
+
+.comment-author {
+    display:inline-block;
+    float:left;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+.comment-metadata {
+    display: inline-block;
+    float: right;
+    padding: 20px 0 0 0;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+.comment-metadata a {
+    color: #000;
+}
+
+.comment-content {
+    clear: both;
+    width: 100%;
+    display: block;
+    /*border-top: 1px solid #000;*/
+    background: url(images/horizontal-rule-circles.png) no-repeat top;
+    background-size: 100%;
+    font-size: 16px;
+    font-style: italic;
+}
+
+.comment-content p {
+    padding: 0 34px;
+}
+
+.comment-respond label {
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.comment-respond input {
+    display: block;
+    clear: both;
+}
+
+#respond {
+    text-align: left;
+    padding: 0 40px;
+}
 
 /* --------- LARGE MOBILE/PHABLET SCREEN SIZE ----------- */
 @media only screen and (min-width: 410px) {
@@ -1608,7 +1681,11 @@ a {
         float: right;
         width: 45%;
         text-align: left;
-    }    
+    }  
+    
+    #comments ul, #comments ol {
+        margin: 0 1.5em 1.5em 3em;
+    }
     
     
 }

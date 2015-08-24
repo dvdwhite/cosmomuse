@@ -72,9 +72,17 @@
             <?php //cosmomuse_entry_footer(); ?>
         </footer><!-- .entry-footer --> 
         
-                <br clear="all" /><br clear="all" />
+                    <div class="social-footer social-single">
+                        <div style="position:relative; top:-5px;">SHARE THIS POST:</div>
+                        <div><a href="mailto:?subject=CosmoMuse - <?php the_title(); ?>&body=<?php the_permalink(); ?>"><img src="/wp-content/themes/cosmomuse/images/social-email.png" width="20" height="20=" alt="Email" /></a></div>
+                        <div style="position:relative; top:-6px;"><div class="fb-share-button" data-href="<?php the_permalink(); ?>" data-layout="icon"></div></div>
+                        <div><a href="https://www.pinterest.com/CosmoMuse/" target="_blank"><img src="/wp-content/themes/cosmomuse/images/social-pinterest.png" width="20" height="20=" alt="Pinterest" /></a></div>
+                        <div><a href="https://twitter.com/_CosmoMuse" target="_blank"><img src="/wp-content/themes/cosmomuse/images/social-twitter.png" width="20" height="20=" alt="Twitter" /></a></div>
+                    </div>        
                 
-                <div class="tile-break">&nbsp;<br clear="all" />&nbsp;</div>        
+                <div class="tile-break">
+
+                    <br clear="all" />&nbsp;</div>        
         
         <?php
             // If comments are open or we have at least one comment, load up the comment template.

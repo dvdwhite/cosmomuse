@@ -12,6 +12,12 @@
 <head>
 <meta charset="<?php bloginfo( 'charset' ); ?>">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta property="og:url"           content="<?php the_permalink(); ?>" />
+<meta property="og:type"          content="website" />
+<meta property="og:title"         content="Cosmomuse - <?php the_title(); ?>" />
+<meta property="og:description"   content="<?php the_excerpt(); ?>" />
+<meta property="og:image"         content="<?php if ( has_post_thumbnail() ) { the_post_thumbnail(); } ?>" />
+</head>    
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 
@@ -32,6 +38,17 @@
 </head>
 
 <body <?php body_class(); ?>>
+    
+    <!-- Load Facebook SDK for JavaScript -->
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.4&appId=1552395388350854";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>   
+    
 <div id="page" class="hfeed site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'cosmomuse' ); ?></a>
 
