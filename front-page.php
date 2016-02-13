@@ -37,7 +37,9 @@ get_header(); ?>
                         
                         <?php 
                             $feature_id = rwmb_meta( 'cosmo_home_top_left', 'type=post', $home_id ); 
-
+                            
+                            $home_1 = $feature_id;
+                            
                             $category_detail=get_the_category($feature_id);//$post->ID
                             $this_cat_name = $category_detail[0]->slug;
 
@@ -81,6 +83,8 @@ get_header(); ?>
                         <?php 
                             $feature_id = rwmb_meta( 'cosmo_home_lower_left', 'type=post', $home_id ); 
 
+                            $home_2 = $feature_id;
+                            
                             $category_detail=get_the_category($feature_id);//$post->ID
                             $this_cat_name = $category_detail[0]->slug;
 
@@ -123,7 +127,9 @@ get_header(); ?>
                     <?php 
                         $feature_id = rwmb_meta( 'cosmo_home_main_feature', 'type=post', $home_id ); 
                         
-                        $category_detail=get_the_category($feature_id);//$post->ID
+                        $home_3 = $feature_id;
+                            
+                            $category_detail=get_the_category($feature_id);//$post->ID
                         $this_cat_name = $category_detail[0]->slug;
 
                         $signs = rwmb_meta( 'cosmo_sign', 'multiple=false', $feature_id );
@@ -163,6 +169,8 @@ get_header(); ?>
                         <?php 
                             $feature_id = rwmb_meta( 'cosmo_home_top_right', 'type=post', $home_id ); 
 
+                            $home_4 = $feature_id;
+                            
                             $category_detail=get_the_category($feature_id);//$post->ID
                             $this_cat_name = $category_detail[0]->slug;
 
@@ -205,6 +213,8 @@ get_header(); ?>
                         
                         <?php 
                             $feature_id = rwmb_meta( 'cosmo_home_lower_right', 'type=post', $home_id ); 
+
+                            $home_5 = $feature_id;
 
                             $category_detail=get_the_category($feature_id);//$post->ID
                             $this_cat_name = $category_detail[0]->slug;
@@ -252,7 +262,51 @@ get_header(); ?>
                 
                 
                 </div>
-            
+                
+                <div style="margin-top:40px;">
+                
+                <?php
+
+                    $exclude_posts = array( $home_1, $home_2, $home_3, $home_4, $home_5 );
+
+                    $args = array( 'post_type' => 'post', 'posts_per_page' => 10, 'post__not_in' => $exclude_posts );
+                    $loop = new WP_Query( $args );
+                    while ( $loop->have_posts() ) : $loop->the_post();
+                        // this is the default junk from sample site
+                        //the_title();
+                        //echo '<div class="entry-content">';
+                        //the_content();
+                        //echo '</div>';
+
+                        // here's the start of the real loop
+
+                        $category = get_the_category();
+
+                    ?>
+
+                    <div class="post-banner">
+                        <div class="category <?php echo $category[0]->slug; ?>">
+                            <?php echo $category[0]->cat_name; ?>
+                        </div>
+                        <div class="title-sign-container ink-<?php echo $category[0]->slug; ?>">
+                            <div class="feature-sign"><img src="/wp-content/themes/cosmomuse/images/signs/<?php echo rwmb_meta( 'cosmo_sign' ); ?>.png" /></div>
+                            <div class="feature-title">
+                                <h1><a href="<?php echo get_the_permalink() ?>"><?php echo get_the_title() ?></a></h1>
+                                <p><a href="<?php echo get_the_permalink() ?>">Read more</a></p>
+                                <a href="<?php echo get_the_permalink() ?>">
+                                    <div class="arrow"> </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="feature-image post-feature-image"><?php if ( has_post_thumbnail() ) { the_post_thumbnail(); } ?></div>
+                        <br clear="all" />
+                    </div> <br clear="all" /><br clear="all" />
+                    <?php endwhile; ?>
+          
+
+                </div>
+                
+                
             </div>
             
 		</main><!-- #main -->

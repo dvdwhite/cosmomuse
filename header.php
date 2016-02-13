@@ -16,7 +16,7 @@
 <meta property="og:type"          content="website" />
 <meta property="og:title"         content="Cosmomuse - <?php the_title(); ?>" />
 <meta property="og:description"   content="<?php the_excerpt(); ?>" />
-<meta property="og:image"         content="<?php if ( has_post_thumbnail() ) { the_post_thumbnail(); } ?>" />
+<meta property="og:image"         content='<?php if ( has_post_thumbnail() ) { the_post_thumbnail(); } ?>' />
 </head>    
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
