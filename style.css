@@ -1154,6 +1154,20 @@ a {
     background-image: url(/wp-content/themes/cosmomuse/images/ink/wander.jpg);
 }
 
+.aquarius { background-image: url(/wp-content/themes/cosmomuse/images/signs/aquarius_watercolor.png); }
+.aries { background-image: url(/wp-content/themes/cosmomuse/images/signs/aries_watercolor.png); }
+.cancer { background-image: url(/wp-content/themes/cosmomuse/images/signs/cancer_watercolor.png); }
+.capricorn { background-image: url(/wp-content/themes/cosmomuse/images/signs/capricorn_watercolor.png); }
+.gemini { background-image: url(/wp-content/themes/cosmomuse/images/signs/gemini_watercolor.png); }
+.leo { background-image: url(/wp-content/themes/cosmomuse/images/signs/leo_watercolor.png); }
+.libra { background-image: url(/wp-content/themes/cosmomuse/images/signs/libra_watercolor.png); }
+.pisces { background-image: url(/wp-content/themes/cosmomuse/images/signs/pisces_watercolor.png); }
+.sagittarius { background-image: url(/wp-content/themes/cosmomuse/images/signs/sagittarius_watercolor.png); }
+.scorpio { background-image: url(/wp-content/themes/cosmomuse/images/signs/scorpio_watercolor.png); }
+.taurus { background-image: url(/wp-content/themes/cosmomuse/images/signs/taurus_watercolor.png); }
+.virgo { background-image: url(/wp-content/themes/cosmomuse/images/signs/virgo_watercolor.png); }
+
+
 .feature-sign img {
     width: 60px;
     height: 60px;
@@ -1340,6 +1354,10 @@ a {
     padding:10px 6px;
 }
 
+
+
+/* --------- POST COMMENTS ----------- */
+
 #comments {
     font-family: 'BrandonGrotesque-Regular';
 }
@@ -1409,6 +1427,134 @@ a {
     padding: 0 40px;
 }
 
+
+
+
+/* --------- HOROSCOPE PAGE ----------- */
+
+.horoscope-banner-wrapper {
+    width: 96%;
+    background: #fff;
+    margin: 0 auto;
+    max-width:1160px;
+    /*background-image: url(images/feature-left-bg.gif), url(images/feature-right-bg.gif);
+    background-position: left, right;
+    background-repeat:no-repeat,no-repeat;*/
+}
+
+.horoscope-banner-bg {
+    width: 100%;
+    margin: 0 auto;
+    background: #292929;
+    background-image: url(images/horoscope-right-bg.png), url(images/horoscope-left-bg.png);
+    background-position: left, right;
+    background-repeat:no-repeat,no-repeat;
+}
+
+.horoscope-large-bg {
+    width:100%;
+    background: url(images/horoscope-bg-large.jpg) no-repeat top right;
+    padding: 0 0 4px 0;
+}
+
+.horoscope-banner-title {
+    display: block;
+    width: 100%;
+    text-align: left;
+}
+
+.horoscope-banner-title h1 {
+    color: #fff;
+    display: inline-block;
+    padding: 0 0 0 20px;
+    font-family: 'BrandonGrotesque-Light';
+    font-size: 16px;
+    text-align: left;
+    letter-spacing: 0.1em;
+    margin: 16px 0 0 0;
+}
+
+.horoscope-content-wrapper {
+    background:#fff;
+    display: block;
+    margin: 0 16px 16px 16px;
+}
+
+.horoscope-content-sign {
+    width: 100%;
+    background-size: 310px;
+    background-position: center 8px;
+    background-repeat: no-repeat;
+    padding: 10px 0 0 0;
+    display: inline-block;
+}
+
+.horoscope-sign img {
+    width: 80px;
+    height: 80px;
+}
+
+.horoscope-content-description {
+    text-align: left;
+    margin: 0 26px 16px 16px;
+}
+
+.horoscope-sign-name {
+    padding: 140px 0 0 0;
+    text-transform: uppercase;
+    font-size: 36px;  
+}
+
+.horoscope-sign-name p {
+    font-size: 12px;
+    margin: 0;
+}
+
+.horoscope-signs-container {
+    margin: 26px 0 0 0;
+}
+
+.horoscope-sign-date {
+    background: url(images/horoscope-grid-bg.png) no-repeat left top;
+    display:inline;
+    float:left;
+    padding: 40px 0;
+    width:220px;
+}
+
+.horoscope-sign-date .horoscope-sign img {
+    width:80px;
+    height:80px;
+}
+
+.horoscope-sign-date .horoscope-sign-name {
+    padding: 0;
+}
+
+.horoscope-sign-description {
+    display:inline;
+    float:left;
+    text-align:left;
+    padding: 0 42px 0 32px;
+    font-size: 13px;
+    max-width:280px;    
+}
+
+.horoscope-zodiac-content {
+    display: block;
+    margin: 40px 0;
+}
+
+
+/* --------- iPHONE 6 SCREEN SIZE ----------- */
+@media only screen and (min-width: 375px) {
+    
+    .horoscope-banner-title h1 {
+        font-size: 21px;
+    }
+    
+}
+
 /* --------- LARGE MOBILE/PHABLET SCREEN SIZE ----------- */
 @media only screen and (min-width: 410px) {
     
@@ -1439,6 +1585,10 @@ a {
     
     .feature-image {
         padding: 30px 70px 20px 70px;
+    }  
+    
+    .horoscope-banner-title h1 {
+        font-size: 22px;
     }    
     
 }
@@ -1488,12 +1638,12 @@ a {
         float:left;
         margin: 20px;
         background-size: 240px 240px;
-    }   
+    }    
    
     .feature-sign img {
         width: 100px;
         height: 100px;
-    }
+    }   
 
     .feature-image {
         width: 45%;
@@ -1504,6 +1654,10 @@ a {
     
     .content-column {
         padding:30px 16px;
+    }    
+    
+    .horoscope-banner-title h1 {
+        font-size: 32px;
     }    
     
 }
@@ -1609,7 +1763,7 @@ a {
     
     .title-sign-container {
         background-size: 280px 280px;
-    }     
+    }         
     
     .feature-image {
         padding: 20px 40px 60px 0;
@@ -1687,6 +1841,18 @@ a {
         margin: 0 1.5em 1.5em 3em;
     }
     
+    .horoscope-banner-title h1 {
+        font-size: 36px;
+    } 
+    
+    .horoscope-banner-wrapper {
+        padding: 16px;
+    }
+    
+    .horoscope-content-description {
+        margin: 26px 26px 16px 16px;
+        text-align: left;
+    }    
     
 }
 
@@ -1960,5 +2126,35 @@ a {
     .home-item {
         max-width: 240px;
     } 
+    
+    .horoscope-content-sign {
+        display:inline;
+        float: left;
+        width: 45%;
+        background-size: 450px;
+    }
+    
+    .horoscope-sign-name {
+        padding: 240px 0 0 0;
+    }
+    
+    .horoscope-content-description {
+        display:inline;
+        float: right;
+        width: 45%;
+    }
+    
+}
+
+/* --------- DESKTOP SCREEN SIZE (AND LANDSCAPE iPAD) ----------- */
+@media only screen and (min-width: 1240px) {
+    
+    .horoscope-content-sign {
+        max-width: 525px;
+    }
+    
+    .horoscope-sign-description {
+        max-width:320px;    
+    }    
     
 }

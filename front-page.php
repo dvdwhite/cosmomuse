@@ -268,8 +268,10 @@ get_header(); ?>
                 <?php
 
                     $exclude_posts = array( $home_1, $home_2, $home_3, $home_4, $home_5 );
+                                           
+                    $paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
+                    $args = array( 'post_type' => 'post', 'posts_per_page' => 10, 'post__not_in' => $exclude_posts, 'paged' => $paged );
 
-                    $args = array( 'post_type' => 'post', 'posts_per_page' => 10, 'post__not_in' => $exclude_posts );
                     $loop = new WP_Query( $args );
                     while ( $loop->have_posts() ) : $loop->the_post();
                         // this is the default junk from sample site
@@ -302,7 +304,10 @@ get_header(); ?>
                         <br clear="all" />
                     </div> <br clear="all" /><br clear="all" />
                     <?php endwhile; ?>
-          
+                    
+                    <!--<div class="feature-title"><?php echo get_previous_posts_link( 'Newer Entries' ); ?><div class="arrow"></div></div>-->
+                    <div class="feature-title"><?php echo get_next_posts_link( 'Older Entries', $loop->max_num_pages ); ?><div class="arrow"></div></div>
+                    
 
                 </div>
                 

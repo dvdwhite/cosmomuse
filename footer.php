@@ -16,7 +16,7 @@
     
         <div class="footer">
             <div class="footer-logo"><img src="/wp-content/themes/cosmomuse/images/footer-logo.png" /></div>
-            <div class="copyright">&copy; 2015</div>
+            <div class="copyright">&copy; <?php echo date("Y");?></div>
             <div class="footer-line"> </div>
             <div class="social-footer">
                 <div><a href="https://instagram.com/cosmomuse/" target="_blank"><img src="/wp-content/themes/cosmomuse/images/social-instagram.png" width="20" height="20=" alt="Instagram" /></a></div>

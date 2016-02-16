@@ -158,6 +158,37 @@ require get_template_directory() . '/inc/jetpack.php';
 
 
 /**
+ * Add Horoscope custom post type.
+ */
+
+add_action( 'init', 'create_post_type' );
+function create_post_type() {
+  register_post_type( 'horoscope',
+    array(
+      'labels' => array(
+        'name' => __( 'Horoscope' ),
+        'singular_name' => __( 'Horoscope' )
+      ),
+        'public' => true,
+        'has_archive' => true,
+        'capability_type' => 'post',
+        'supports' => array(
+            'title',
+            'editor',
+            'custom-fields',
+            'revisions',
+            'author'),
+        'taxonomies' => array('category', 'post_tag')
+    )
+  );
+}
+
+function customprefix_init() {
+	add_post_type_support( 'horoscope', 'simple-page-sidebars' );
+}
+add_action( 'init', 'customprefix_init' );
+
+/**
  * Add meta boxes.
  */
 
@@ -388,7 +419,188 @@ function cosmo_home_meta_boxes( $meta_boxes )
 			),              
 
 		)
-	);
+	);    
+	return $meta_boxes;
+}    
+
+add_filter( 'rwmb_meta_boxes', 'cosmo_horoscope_meta_boxes' );
+
+function cosmo_horoscope_meta_boxes( $meta_boxes )
+{
+	/**
+	 * prefix of meta keys (optional)
+	 * Use underscore (_) at the beginning to make keys hidden
+	 * Alt.: You also can make prefix empty to disable it
+	 */
+	// Better has an underscore as last sign
+	$prefix = 'cosmo_horoscope_';
+	// 1st meta box
+	$meta_boxes[] = array(
+		// Meta box id, UNIQUE per meta box. Optional since 4.1.5
+		'id'         => 'cosmo_horoscope',
+		// Meta box title - Will appear at the drag and drop handle bar. Required.
+		'title'      => __( 'Horoscope Signs Content', 'cosmo_horoscope_' ),
+		// Post types, accept custom post types as well - DEFAULT is 'post'. Can be array (multiple post types) or string (1 post type). Optional.
+		'post_types' => array( 'horoscope' ),
+		// Where the meta box appear: normal (default), advanced, side. Optional.
+		'context'    => 'normal',
+		// Order of meta box: high (default), low. Optional.
+		'priority'   => 'high',
+		// Auto save: true, false (default). Optional.
+		'autosave'   => true,
+
+		// List of meta fields
+		'fields'     => array(
+            
+			// SIGN SELECT BOX
+			array(
+				'name'        => __( 'Sign', 'cosmo_horoscope_' ),
+				'id'          => "{$prefix}sign",
+				'type'        => 'select_advanced',
+				// Array of 'value' => 'Label' pairs for select box
+				'options'     => array(
+					'aries' => __( 'Aries', 'cosmo_horoscope_' ),
+					'taurus' => __( 'Taurus', 'cosmo_horoscope_' ),
+                    'gemini' => __( 'Gemini', 'cosmo_horoscope_' ),
+					'cancer' => __( 'Cancer', 'cosmo_horoscope_' ),
+					'leo' => __( 'Leo', 'cosmo_horoscope_' ),
+                    'virgo' => __( 'Virgo', 'cosmo_horoscope_' ),
+                    'libra' => __( 'Libra', 'cosmo_horoscope_' ),
+                    'scorpio' => __( 'Scorpio', 'cosmo_horoscope_' ),
+					'sagittarius' => __( 'Sagittarius', 'cosmo_horoscope_' ),
+					'capricorn' => __( 'Capricorn', 'cosmo_horoscope_' ),
+					'aquarius' => __( 'Aquarius', 'cosmo_horoscope_' ),
+					'pisces' => __( 'Pisces', 'cosmo_horoscope_' ),
+					
+				),
+				// Select multiple values, optional. Default is false.
+				'multiple'    => false,
+				//'std'         => 'Capricorn',
+				'placeholder' => __( 'Select an Item', 'cosmo_horoscope_' ),
+			), 
+            
+			// ARIES TEXTAREA
+			array(
+				'name' => __( 'Aries', 'cosmo_horoscope_' ),
+				'desc' => __( 'Aries horoscope', 'cosmo_horoscope_' ),
+				'id'   => "{$prefix}aries",
+				'type' => 'textarea',
+				'cols' => 20,
+				'rows' => 4,
+			),  
+            
+			// TAURUS TEXTAREA
+			array(
+				'name' => __( 'Taurus', 'cosmo_horoscope_' ),
+				'desc' => __( 'Taurus horoscope', 'cosmo_horoscope_' ),
+				'id'   => "{$prefix}taurus",
+				'type' => 'textarea',
+				'cols' => 20,
+				'rows' => 4,
+			),  
+            
+			// GEMINI TEXTAREA
+			array(
+				'name' => __( 'Gemini', 'cosmo_horoscope_' ),
+				'desc' => __( 'Gemini horoscope', 'cosmo_horoscope_' ),
+				'id'   => "{$prefix}gemini",
+				'type' => 'textarea',
+				'cols' => 20,
+				'rows' => 4,
+			),  
+            
+			// CANCER TEXTAREA
+			array(
+				'name' => __( 'Cancer', 'cosmo_horoscope_' ),
+				'desc' => __( 'Cancer horoscope', 'cosmo_horoscope_' ),
+				'id'   => "{$prefix}cancer",
+				'type' => 'textarea',
+				'cols' => 20,
+				'rows' => 4,
+			),  
+            
+			// LEO TEXTAREA
+			array(
+				'name' => __( 'Leo', 'cosmo_horoscope_' ),
+				'desc' => __( 'Leo horoscope', 'cosmo_horoscope_' ),
+				'id'   => "{$prefix}leo",
+				'type' => 'textarea',
+				'cols' => 20,
+				'rows' => 4,
+			),  
+            
+			// VIRGO TEXTAREA
+			array(
+				'name' => __( 'Virgo', 'cosmo_horoscope_' ),
+				'desc' => __( 'Virgo horoscope', 'cosmo_horoscope_' ),
+				'id'   => "{$prefix}virgo",
+				'type' => 'textarea',
+				'cols' => 20,
+				'rows' => 4,
+			),  
+            
+			// LIBRA TEXTAREA
+			array(
+				'name' => __( 'Libra', 'cosmo_horoscope_' ),
+				'desc' => __( 'Libra horoscope', 'cosmo_horoscope_' ),
+				'id'   => "{$prefix}libra",
+				'type' => 'textarea',
+				'cols' => 20,
+				'rows' => 4,
+			),  
+            
+			// SCORPIO TEXTAREA
+			array(
+				'name' => __( 'Scorpio', 'cosmo_horoscope_' ),
+				'desc' => __( 'Scorpio horoscope', 'cosmo_horoscope_' ),
+				'id'   => "{$prefix}scorpio",
+				'type' => 'textarea',
+				'cols' => 20,
+				'rows' => 4,
+			),  
+            
+			// SAGITTARIUS TEXTAREA
+			array(
+				'name' => __( 'Sagittarius', 'cosmo_horoscope_' ),
+				'desc' => __( 'Sagittarius horoscope', 'cosmo_horoscope_' ),
+				'id'   => "{$prefix}sagittarius",
+				'type' => 'textarea',
+				'cols' => 20,
+				'rows' => 4,
+			),  
+            
+			// CAPRICORN TEXTAREA
+			array(
+				'name' => __( 'Capricorn', 'cosmo_horoscope_' ),
+				'desc' => __( 'Capricorn horoscope', 'cosmo_horoscope_' ),
+				'id'   => "{$prefix}capricorn",
+				'type' => 'textarea',
+				'cols' => 20,
+				'rows' => 4,
+			),  
+            
+			// AQUARIUS TEXTAREA
+			array(
+				'name' => __( 'Aquarius', 'cosmo_horoscope_' ),
+				'desc' => __( 'Aquarius horoscope', 'cosmo_horoscope_' ),
+				'id'   => "{$prefix}aquarius",
+				'type' => 'textarea',
+				'cols' => 20,
+				'rows' => 4,
+			),  
+            
+			// PISCES TEXTAREA
+			array(
+				'name' => __( 'Pisces', 'cosmo_horoscope_' ),
+				'desc' => __( 'Pisces horoscope', 'cosmo_horoscope_' ),
+				'id'   => "{$prefix}pisces",
+				'type' => 'textarea',
+				'cols' => 20,
+				'rows' => 4,
+			),             
+
+		)
+	);    
 	return $meta_boxes;
 }
 
