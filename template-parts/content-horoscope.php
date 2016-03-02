@@ -42,6 +42,7 @@
                     <div class="horoscope-sign-description">
                         <?php echo rwmb_meta( 'cosmo_horoscope_aries' ); ?>
                     </div>
+                    <br clear="all" />
                 </div>
                 
                 <div class="horoscope-zodiac-content">
@@ -55,6 +56,7 @@
                     <div class="horoscope-sign-description">
                         <?php echo rwmb_meta( 'cosmo_horoscope_taurus' ); ?>
                     </div>
+                    <br clear="all" />
                 </div>
                 
                 <br clear="all" />
@@ -70,6 +72,7 @@
                     <div class="horoscope-sign-description">
                         <?php echo rwmb_meta( 'cosmo_horoscope_gemini' ); ?>
                     </div>
+                    <br clear="all" />
                 </div>
                 
                 <div class="horoscope-zodiac-content">
@@ -83,6 +86,7 @@
                     <div class="horoscope-sign-description">
                         <?php echo rwmb_meta( 'cosmo_horoscope_cancer' ); ?>
                     </div>
+                    <br clear="all" />
                 </div>                
                 
                 <br clear="all" />
@@ -98,6 +102,7 @@
                     <div class="horoscope-sign-description">
                         <?php echo rwmb_meta( 'cosmo_horoscope_leo' ); ?>
                     </div>
+                    <br clear="all" />
                 </div>
                 
                 <div class="horoscope-zodiac-content">
@@ -111,6 +116,7 @@
                     <div class="horoscope-sign-description">
                         <?php echo rwmb_meta( 'cosmo_horoscope_virgo' ); ?>
                     </div>
+                    <br clear="all" />
                 </div>                
                 
                 <br clear="all" />
@@ -126,6 +132,7 @@
                     <div class="horoscope-sign-description">
                         <?php echo rwmb_meta( 'cosmo_horoscope_libra' ); ?>
                     </div>
+                    <br clear="all" />
                 </div>
                 
                 <div class="horoscope-zodiac-content">
@@ -139,6 +146,7 @@
                     <div class="horoscope-sign-description">
                         <?php echo rwmb_meta( 'cosmo_horoscope_scorpio' ); ?>
                     </div>
+                    <br clear="all" />
                 </div>                
                 
                 <br clear="all" />
@@ -154,6 +162,7 @@
                     <div class="horoscope-sign-description">
                         <?php echo rwmb_meta( 'cosmo_horoscope_sagittarius' ); ?>
                     </div>
+                    <br clear="all" />
                 </div>
                 
                 <div class="horoscope-zodiac-content">
@@ -167,6 +176,7 @@
                     <div class="horoscope-sign-description">
                         <?php echo rwmb_meta( 'cosmo_horoscope_capricorn' ); ?>
                     </div>
+                    <br clear="all" />
                 </div>                
                 
                 <br clear="all" />
@@ -182,6 +192,7 @@
                     <div class="horoscope-sign-description">
                         <?php echo rwmb_meta( 'cosmo_horoscope_aquarius' ); ?>
                     </div>
+                    <br clear="all" />
                 </div>
                 
                 <div class="horoscope-zodiac-content">
@@ -195,6 +206,7 @@
                     <div class="horoscope-sign-description">
                         <?php echo rwmb_meta( 'cosmo_horoscope_pisces' ); ?>
                     </div>
+                    <br clear="all" />
                 </div>                
                 
                 <br clear="all" />

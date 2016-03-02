@@ -156,12 +156,15 @@ get_header(); ?>
                         <br clear="all" />
                     </div>	
 
-
+                    
                     <div class="home-horoscope-desktop">
-                        <div class="home-horoscope-title">WEEKLY HOROSCOPE</div>   
-                        <div class="home-horoscope-copy"><?php echo rwmb_meta( 'cosmo_home_horoscope' ); ?><span class="arrow"></span></div>
+                        <a href="/horoscope/week-of-february-22-28/">
+                            <div class="home-horoscope-title">WEEKLY HOROSCOPE</div>   
+                            <div class="home-horoscope-copy"><?php echo rwmb_meta( 'cosmo_home_horoscope' ); ?><span class="arrow"></span></div>
+                        </a>    
                     </div>
-
+                    
+                        
                     <div class="home-feature-right">            
 
                         <!-- Start a feature -->

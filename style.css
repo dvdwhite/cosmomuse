@@ -1499,10 +1499,15 @@ a {
     margin: 0 26px 16px 16px;
 }
 
+.about-content-description {
+    text-align: left;
+    padding: 16px 26px 0 26px;
+}
+
 .horoscope-sign-name {
     padding: 140px 0 0 0;
     text-transform: uppercase;
-    font-size: 36px;  
+    font-size: 32px;  
 }
 
 .horoscope-sign-name p {
@@ -1532,17 +1537,36 @@ a {
 }
 
 .horoscope-sign-description {
-    display:inline;
+    display:inline-block;
     float:left;
     text-align:left;
     padding: 0 42px 0 32px;
     font-size: 13px;
-    max-width:280px;    
+    max-width:64%;    
 }
 
 .horoscope-zodiac-content {
-    display: block;
+    display: inline-block;
     margin: 40px 0;
+    clear:both;
+}
+
+.about-wrapper {
+    display:block;
+    padding: 40px 40px 40px 20px;
+    clear: both;
+}
+
+.about-photo {
+    display: inline;
+    float:left;
+    padding: 0 40px 0 0;
+}
+
+.about-bio {
+    display: inline;
+    float: left;
+    text-align: left;
 }
 
 
@@ -1872,12 +1896,16 @@ a {
         position: absolute;
         left: 47%;
         top: 272px;
+    }    
+    
+    .about-bio {
+        width: 60%;
     }
     
 }
 
 /* --------- DESKTOP SCREEN SIZE (AND LANDSCAPE iPAD) ----------- */
-@media only screen and (min-width: 1126px) {
+@media only screen and (min-width: 1140px) {
     
     .header {
         height: 324px;
@@ -2006,7 +2034,7 @@ a {
     .home-horoscope-title {
         display: inline;
         float: left;
-        width: 270px;
+        width: 240px;
         height: 70px;
         color: #fff;
         background: url(images/horoscope-bg.jpg);
@@ -2023,6 +2051,10 @@ a {
         font-size: 17px;
         text-align: left;
     }
+    
+    .home-horoscope-desktop a {
+        color: #525454;
+    }    
     
     .home-container {
         margin: 0 auto;
@@ -2143,6 +2175,14 @@ a {
         float: right;
         width: 45%;
     }
+    
+    .horoscope-zodiac-content {
+        clear: none;
+    }  
+    
+.horoscope-sign-description {
+    max-width:280px;    
+}    
     
 }
 

@@ -604,3 +604,53 @@ function cosmo_horoscope_meta_boxes( $meta_boxes )
 	return $meta_boxes;
 }
 
+
+add_filter( 'rwmb_meta_boxes', 'cosmo_about_meta_boxes' );
+
+function cosmo_about_meta_boxes( $meta_boxes )
+{
+	/**
+	 * prefix of meta keys (optional)
+	 * Use underscore (_) at the beginning to make keys hidden
+	 * Alt.: You also can make prefix empty to disable it
+	 */
+	// Better has an underscore as last sign
+	$prefix = 'cosmo_about_';
+	// 1st meta box
+	$meta_boxes[] = array(
+		// Meta box id, UNIQUE per meta box. Optional since 4.1.5
+		'id'         => 'cosmo_about',
+		// Meta box title - Will appear at the drag and drop handle bar. Required.
+		'title'      => __( 'About Content', 'cosmo_about_' ),
+		// Post types, accept custom post types as well - DEFAULT is 'post'. Can be array (multiple post types) or string (1 post type). Optional.
+		'post_types' => array( 'page' ),
+		// Where the meta box appear: normal (default), advanced, side. Optional.
+		'context'    => 'normal',
+		// Order of meta box: high (default), low. Optional.
+		'priority'   => 'high',
+		// Auto save: true, false (default). Optional.
+		'autosave'   => true,
+		// Register this meta box for posts matched below conditions
+        'include' => array(
+            // List of post slugs. Can be array or comma separated. Optional.
+            'slug'       => array( 'about' ),
+        ),
+		// List of meta fields
+		'fields'     => array(
+            
+			// ALLIE BIO TEXTAREA
+			array(
+				'name' => __( 'Allie', 'cosmo_about_' ),
+				'desc' => __( 'Allie Bio', 'cosmo_about_' ),
+				'id'   => "{$prefix}allie_bio",
+				'type' => 'textarea',
+				'cols' => 20,
+				'rows' => 4,
+			),  
+                        
+
+		)
+	);    
+	return $meta_boxes;
+}
+
