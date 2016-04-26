@@ -158,7 +158,7 @@ get_header(); ?>
 
                     
                     <div class="home-horoscope-desktop">
-                        <a href="/horoscope/week-of-february-22-28/">
+                        <a href="/horoscope/week-of-march-14-20-2016/">
                             <div class="home-horoscope-title">WEEKLY HOROSCOPE</div>   
                             <div class="home-horoscope-copy"><?php echo rwmb_meta( 'cosmo_home_horoscope' ); ?><span class="arrow"></span></div>
                         </a>    
@@ -272,8 +272,8 @@ get_header(); ?>
 
                     $exclude_posts = array( $home_1, $home_2, $home_3, $home_4, $home_5 );
                                            
-                    $paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
-                    $args = array( 'post_type' => 'post', 'posts_per_page' => 10, 'post__not_in' => $exclude_posts, 'paged' => $paged );
+                    $paged = ( get_query_var( 'page' ) ) ? get_query_var( 'page' ) : 1;
+                    $args = array( 'post_type' => 'post', 'posts_per_page' => 6, 'post__not_in' => $exclude_posts, 'paged' => $paged );
 
                     $loop = new WP_Query( $args );
                     while ( $loop->have_posts() ) : $loop->the_post();
@@ -308,9 +308,13 @@ get_header(); ?>
                     </div> <br clear="all" /><br clear="all" />
                     <?php endwhile; ?>
                     
-                    <!--<div class="feature-title"><?php echo get_previous_posts_link( 'Newer Entries' ); ?><div class="arrow"></div></div>-->
-                    <div class="feature-title"><?php echo get_next_posts_link( 'Older Entries', $loop->max_num_pages ); ?><div class="arrow"></div></div>
+                    <div class="home-nav-previous"><?php echo get_previous_posts_link( 'PREVIOUS' ); ?></div>
+                    <div class="home-nav-next"><?php echo get_next_posts_link( 'NEXT', $loop->max_num_pages ); ?></div>
                     
+                    <?php 
+                    // clean up after the query and pagination
+                    wp_reset_postdata(); 
+                    ?>
 
                 </div>
                 

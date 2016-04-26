@@ -1097,6 +1097,43 @@ a {
     float: left;
 }
 
+.home-nav-previous {
+    display: inline;
+    float: left;
+    width: 50%;
+    text-align: right;
+    padding: 0 1em;
+}
+
+.home-nav-next {
+    display: inline;
+    float: right;
+    width: 50%;
+    text-align: left;
+    padding: 0 1em;
+}
+
+.home-nav-previous a {
+    color: #525454;
+    display: inline-block;
+    background: url(images/arrow-left.png) no-repeat 0 6px;
+    width: 116px;
+    height: 20px;
+    
+}
+
+.home-nav-next a {
+    color: #525454;
+    display: inline-block;
+    background: url(images/arrow.png) no-repeat 50px 6px;
+    width: 116px;
+    height: 20px;
+}
+
+.home-nav-previous a:visited, home-nav-next a:visited {
+    color:#525454;
+}
+
 .horoscope-description a {
     color: #525454;
 }
@@ -1294,6 +1331,13 @@ a {
     height: 10px;
     width: 50px;
     background: url(images/arrow.png) no-repeat center;
+}
+
+.arrow-left {
+    display: inline-block;
+    height: 10px;
+    width: 50px;
+    background: url(images/arrow-left.png) no-repeat center;
 }
 
 .comments-title {
