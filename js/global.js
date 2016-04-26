@@ -15,6 +15,7 @@ $(function() {
     var mns = "header-scrolled";
     var hdr = $('.header').height() - 110;
     var body = $('.body');
+    var sw = $( document ).width();
     
     
     $(window).scroll(function() {
@@ -33,7 +34,22 @@ $(function() {
             search.removeClass('search-adjust');
             body.removeClass('body-adjust');
         }
+        
+        
+        if (sw > 766) {
+            if( $(this).scrollTop() > 1000 ) {
+                $('.floating-top-button').fadeIn();
+            } else {
+                $('.floating-top-button').fadeOut();
+            }
+        }
+        
     });
+    
+    $('.floating-top-button').click(function() {
+		$('html, body').animate({scrollTop : 0},800);
+		return false;
+    })
     
     
     // Get the current sign and display the appropriate dates

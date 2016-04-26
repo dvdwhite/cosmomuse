@@ -1022,6 +1022,17 @@ a {
     margin: 0;
 }
 
+.floating-top-button {
+    background: url(images/floating-top-button.png) no-repeat center;
+    width: 126px;
+    height: 25px;
+    position: fixed;
+    bottom: 46px;
+    right: 26px;
+    display: none;
+    cursor: pointer;
+}
+
 .content-container {
     width: 100%;
     margin: 36px auto 0 auto;
@@ -1097,36 +1108,40 @@ a {
     float: left;
 }
 
+.home-nav-container {
+    position: relative;
+    top: 190px;
+}
+
 .home-nav-previous {
     display: inline;
     float: left;
     width: 50%;
     text-align: right;
-    padding: 0 1em;
+    padding: 0 10px 0 0;
 }
-
+    
 .home-nav-next {
     display: inline;
     float: right;
     width: 50%;
     text-align: left;
-    padding: 0 1em;
+    padding: 0 0 0 10px;
 }
 
 .home-nav-previous a {
     color: #525454;
     display: inline-block;
     background: url(images/arrow-left.png) no-repeat 0 6px;
-    width: 116px;
+    width: 156px;
     height: 20px;
-    
 }
 
 .home-nav-next a {
     color: #525454;
     display: inline-block;
-    background: url(images/arrow.png) no-repeat 50px 6px;
-    width: 116px;
+    background: url(images/arrow.png) no-repeat 126px 6px;
+    width: 156px;
     height: 20px;
 }
 
@@ -1828,6 +1843,19 @@ a {
     .home-item {
         width: 44%;
     }  
+    
+    .home-nav-container {
+        top: 114px;
+    }
+    
+    .home-nav-previous {
+        padding: 0 140px 0 0;
+    }
+
+    .home-nav-next {
+        display: inline;
+        padding: 0 0 0 140px;
+    }    
     
     .title-sign-container {
         background-size: 280px 280px;

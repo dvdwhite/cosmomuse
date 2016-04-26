@@ -31,5 +31,7 @@ get_header(); ?>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
+    <div class="floating-top-button"></div>
+
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>

@@ -273,7 +273,7 @@ get_header(); ?>
                     $exclude_posts = array( $home_1, $home_2, $home_3, $home_4, $home_5 );
                                            
                     $paged = ( get_query_var( 'page' ) ) ? get_query_var( 'page' ) : 1;
-                    $args = array( 'post_type' => 'post', 'posts_per_page' => 6, 'post__not_in' => $exclude_posts, 'paged' => $paged );
+                    $args = array( 'post_type' => 'post', 'posts_per_page' => 8, 'post__not_in' => $exclude_posts, 'paged' => $paged );
 
                     $loop = new WP_Query( $args );
                     while ( $loop->have_posts() ) : $loop->the_post();
@@ -308,9 +308,11 @@ get_header(); ?>
                     </div> <br clear="all" /><br clear="all" />
                     <?php endwhile; ?>
                     
-                    <div class="home-nav-previous"><?php echo get_previous_posts_link( 'PREVIOUS' ); ?></div>
-                    <div class="home-nav-next"><?php echo get_next_posts_link( 'NEXT', $loop->max_num_pages ); ?></div>
-                    
+                    <div class="home-nav-container">
+                        <div class="home-nav-previous"><?php echo get_previous_posts_link( 'NEWER POSTS' ); ?></div>
+                        <div class="home-nav-next"><?php echo get_next_posts_link( 'OLDER POSTS', $loop->max_num_pages ); ?></div>
+                    </div>
+                        
                     <?php 
                     // clean up after the query and pagination
                     wp_reset_postdata(); 
@@ -323,6 +325,8 @@ get_header(); ?>
             
 		</main><!-- #main -->
 	</div><!-- #primary -->
+
+    <div class="floating-top-button"></div>
 
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>
