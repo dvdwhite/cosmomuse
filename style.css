@@ -988,6 +988,21 @@ a {
     color: #525454;
 }
 
+.footer-search {
+    position: relative;
+    top: -12px;
+}
+
+.footer-search label {
+    text-transform: uppercase;
+    font-family: 'BrandonGrotesque-Regular';
+    font-size: 11px;
+    padding: 10px 12px 0 36px;
+    position: relative;
+    top: 6px;
+    color: #525454;
+}
+
 #search {
     text-transform: uppercase;
     font-family: 'BrandonGrotesque-Regular';
@@ -1873,7 +1888,7 @@ a {
     
     
     .entry-content {
-        margin: 30px;
+        margin: 80px 30px;
     }   
     
     .tiles img {

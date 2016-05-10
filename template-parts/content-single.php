@@ -72,24 +72,14 @@
             <?php //cosmomuse_entry_footer(); ?>
         </footer><!-- .entry-footer --> 
         
-                    <div class="social-footer social-single">
-                        <div style="position:relative; top:-5px;">SHARE THIS POST:</div>
-                        <div><a href="mailto:?subject=CosmoMuse - <?php the_title(); ?>&body=<?php the_permalink(); ?>"><img src="/wp-content/themes/cosmomuse/images/social-email.png" width="20" height="20=" alt="Email" /></a></div>
-                        <div style="position:relative; top:-6px;"><div class="fb-share-button" data-href="<?php the_permalink(); ?>" data-layout="icon"></div></div>
-                        <div><a href="//www.pinterest.com/pin/create/button/" data-pin-do="buttonBookmark"  data-pin-color="red"><img src="//assets.pinterest.com/images/pidgets/pinit_fg_en_rect_red_20.png" /></a>
-<!-- Please call pinit.js only once per page -->
-<script type="text/javascript" async defer src="//assets.pinterest.com/js/pinit.js"></script></div>
-                        <div><a href="https://twitter.com/share" class="twitter-share-button" data-via="dvdwhite" data-count="none">Tweet</a>
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script></div>
-                    </div>        
+      
                 
-                <div class="tile-break">
-
-                    <br clear="all" />&nbsp;</div>        
+        
         
         <?php
             // If comments are open or we have at least one comment, load up the comment template.
             if ( comments_open() || get_comments_number() ) :
+                echo '<div class="tile-break"><br clear="all" />&nbsp;</div>';
                 comments_template();
             endif;
         ?>   
