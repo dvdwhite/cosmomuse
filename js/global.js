@@ -37,10 +37,12 @@ $(function() {
         
         
         if (sw > 766) {
-            if( $(this).scrollTop() > 1000 ) {
+            if( $(this).scrollTop() > 700 ) {
                 $('.floating-top-button').fadeIn();
+                $('.floating-nav-widget').fadeIn();
             } else {
                 $('.floating-top-button').fadeOut();
+                $('.floating-nav-widget').fadeOut();
             }
         }
         
@@ -50,6 +52,13 @@ $(function() {
 		$('html, body').animate({scrollTop : 0},800);
 		return false;
     })
+    
+
+    if ($('.floating-nav-item').contents().length != 0) {
+        console.log('true');
+        $(this).css('display','block');
+    }    
+    
     
     
     // Get the current sign and display the appropriate dates

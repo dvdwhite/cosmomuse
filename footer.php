@@ -24,18 +24,14 @@
                 <div><a href="https://www.pinterest.com/CosmoMuse/" target="_blank"><img src="/wp-content/themes/cosmomuse/images/social/pinterest.png" width="20" height="20=" alt="Pinterest" /></a></div>
                 <div><a href="https://twitter.com/_CosmoMuse" target="_blank"><img src="/wp-content/themes/cosmomuse/images/social/twitter.png" width="20" height="20=" alt="Twitter" /></a></div>
                 <!--<div><a href="#"><img src="/wp-content/themes/cosmomuse/images/social-google.png" width="20" height="20=" alt="Google" /></a></div>-->
-                <div class="footer-search">
-
-                    <?php get_search_form(); ?>                
-
-                    <!--<label><strong>SEARCH</strong></label>
-                    <input type="text" value="" /><br clear="all" /><br clear="all" />-->
-                </div>                
+                <div class="footer-search"><?php get_search_form(); ?></div>                
             </div>
         </div>		
 	</footer><!-- #colophon -->
 
 </div><!-- #page -->
+
+<div class="floating-top-button"></div>
 
 <?php wp_footer(); ?>
 

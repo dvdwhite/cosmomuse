@@ -312,6 +312,12 @@ get_header(); ?>
                         <div class="home-nav-previous"><?php echo get_previous_posts_link( 'NEWER POSTS' ); ?></div>
                         <div class="home-nav-next"><?php echo get_next_posts_link( 'OLDER POSTS', $loop->max_num_pages ); ?></div>
                     </div>
+
+                    <div class="floating-nav-widget">
+                        <div class="floating-nav-previous floating-nav-item"><?php echo get_previous_posts_link( 'PREVIOUS' ); ?></div>
+                        <div class="floating-nav-next floating-nav-item"><?php echo get_next_posts_link( 'NEXT', $loop->max_num_pages ); ?></div>
+                        <div class="floating-archives-button"><a href="/"></a></div>
+                    </div>                    
                         
                     <?php 
                     // clean up after the query and pagination
@@ -326,7 +332,6 @@ get_header(); ?>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
-    <div class="floating-top-button"></div>
 
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>

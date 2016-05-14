@@ -14,6 +14,13 @@ get_header(); ?>
 
 			<?php get_template_part( 'template-parts/content', 'single' ); ?>
 
+                    <div class="floating-nav-widget">
+                        <div class="floating-nav-previous"><a href="<?php echo get_permalink(get_adjacent_post(false,'',false)); ?>">PREVIOUS</a></div>
+                        <div class="floating-nav-next"><a href="<?php echo get_permalink(get_adjacent_post(false,'',true)); ?>">NEXT</a></div>
+                        <div class="floating-home-button"><a href="/"></a></div>
+                        <div class="floating-archives-button"><a href="/"></a></div>
+                    </div>             
+            
 			<?php //the_post_navigation(); ?>
 
 		<?php endwhile; // End of the loop. ?>

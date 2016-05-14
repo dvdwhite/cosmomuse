@@ -1040,7 +1040,7 @@ a {
 .floating-top-button {
     background: url(images/floating-top-button.png) no-repeat center;
     width: 126px;
-    height: 25px;
+    height: 45px;
     position: fixed;
     bottom: 46px;
     right: 26px;
@@ -1262,6 +1262,16 @@ a {
     border-top:1px solid #fbe8e2;
 }
 
+.tile-break-circles {
+    clear: both;
+    display: block;
+    width: 94%;
+    margin: 20px auto 0 auto;  
+    border-top:1px solid #fbe8e2;
+    /*background: url(images/horizontal-rule-circles.png) no-repeat top;
+    background-size: 100%;*/
+}
+
 .list-container {
     display: block;
 }
@@ -1411,7 +1421,7 @@ a {
 
 .social-footer div {
     display: inline-block;
-    margin: 0 16px 0 0;
+    margin: 0 16px 20px 0;
 }
 
 .social-footer div:last-child {
@@ -1428,6 +1438,60 @@ a {
     padding:10px 6px;
 }
 
+
+.content-bar {
+    display: inline-block;
+    width: 110px;
+    height: 12px;
+    background: url(images/intro-bar.png) no-repeat left;
+}
+
+.floating-nav-widget {
+    position: fixed;
+    left: 40px;
+    top: 50%;
+    display: none;
+}
+
+.floating-nav-widget a {
+    color: #525454;
+}
+
+.floating-nav-widget a:hover {
+    text-decoration: underline;
+}
+
+.floating-nav-previous a {
+    display: inline-block;
+    height: 80px;
+    background: url(images/arrow-up.png) no-repeat top;
+    padding: 40px 0 0 0;
+}
+
+.floating-nav-next a {
+    display: inline-block;
+    height: 64px;
+    background: url(images/arrow-down.png) no-repeat bottom;
+    margin: 16px 0;
+}
+
+.floating-home-button a {
+    display: inline-block;
+    background: url(images/floating-home-button.png) no-repeat left center;
+    width: 126px;
+    height: 45px;
+    cursor: pointer;
+    margin: 16px 0 0 0;
+}
+
+.floating-archives-button a {
+    display: inline-block;
+    background: url(images/floating-archives-button.png) no-repeat left center;
+    width: 126px;
+    height: 45px;
+    cursor: pointer;
+    margin: 16px 0 0 0;
+}
 
 
 /* --------- POST COMMENTS ----------- */
@@ -1501,7 +1565,15 @@ a {
     padding: 0 40px;
 }
 
+/* --------- RELATED POSTS ----------- */
 
+.relatedposts {
+    text-align: center;
+}
+
+.relatedposts h2 {
+    
+}
 
 
 /* --------- HOROSCOPE PAGE ----------- */
@@ -1888,7 +1960,7 @@ a {
     
     
     .entry-content {
-        margin: 80px 30px;
+        margin: 80px 30px 0 30px;
     }   
     
     .tiles img {

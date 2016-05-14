@@ -36,27 +36,71 @@
             <div class="tiles">
                 <?php the_content(); ?>
                 
-                <br clear="all" /><br clear="all" />
                 
-                <!--<div class="tile-break">&nbsp;<br clear="all" />&nbsp;</div>
                 
-                <div class="list-container">
-                    <div class="list">
-                        <?php echo rwmb_meta( 'cosmo_list_title' ); ?><br />
+                <br clear="all" />
+                
+                
+                
+                <?php
+                    $post_tags = wp_get_post_tags($post->ID);
+                    $tag_count = count($post_tags);
+                    if ( $tag_count >= 1 ) {
+                    ?>
 
-                        <?php echo rwmb_meta( 'cosmo_list' ); ?>                    
-                    </div>
-                    <div class="list-image">
-                        <?php 
-                            $images = rwmb_meta( 'cosmo_list_image', 'type=image' );
-                            foreach ( $images as $image )
-                            {
-                                echo "<img src='{$image['url']}' />";
-                            }
-                        ?>                    
-                    </div>
-                </div>-->
-                
+                    <div class="relatedposts">  
+                        <h2>YOU MAY ALSO LIKE</h2>
+                        <div class="eq-ht-wrapper clearfix">
+                        <?php  
+                            $orig_post = $post;  
+                            global $post;
+                            $tags = wp_get_post_tags($post->ID);  
+
+                            if ($tags) {  
+                            $tag_ids = array();  
+                            foreach($tags as $individual_tag) $tag_ids[] = $individual_tag->term_id;  
+                            $args=array(  
+                            'tag__in' => $tag_ids,  
+                            'post__not_in' => array($post->ID),  
+                            'posts_per_page'=>4, // Number of related posts to display.  
+                            'caller_get_posts'=>1  
+                            );  
+
+                            $my_query = new wp_query( $args );  
+
+                            while( $my_query->have_posts() ) {  
+                            $my_query->the_post();  
+                            ?>  
+
+                            <div class="relatedthumb eq-ht col-4">  
+                                <a rel="external" href="<? the_permalink()?>">
+                                <?php
+                                if ( has_post_thumbnail() ) {
+                                    the_post_thumbnail('medium');
+                                }else{
+                                    //echo '<img src="http://placehold.it/229x100&text=View+Article"/>';
+                                }
+                                ?>
+                                </a>
+                                 <a class="title" rel="external" href="<? the_permalink()?>"><?php the_title(); ?></a><br />
+                                <span class="related-date"><?php echo get_the_date(); ?></span>
+                            </div>  
+
+                            <?php }  
+                            }  
+                            $post = $orig_post;  
+                            wp_reset_query();  
+                            ?>
+                        </div>    <!-- End Four Columns Wrapper-->
+                    </div> <!-- End related posts by tag -->                
+
+                    <hr />
+
+                      <?php
+                    }
+                    else {}
+                ?><!-- End has tag ? -->
+
             </div>
             
             
@@ -79,7 +123,7 @@
         <?php
             // If comments are open or we have at least one comment, load up the comment template.
             if ( comments_open() || get_comments_number() ) :
-                echo '<div class="tile-break"><br clear="all" />&nbsp;</div>';
+                echo '<div class="tile-break-circles"><br clear="all" />&nbsp;</div>';
                 comments_template();
             endif;
         ?>   
