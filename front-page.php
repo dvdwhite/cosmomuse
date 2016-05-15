@@ -316,7 +316,7 @@ get_header(); ?>
                     <div class="floating-nav-widget">
                         <div class="floating-nav-previous floating-nav-item"><?php echo get_previous_posts_link( 'PREVIOUS' ); ?></div>
                         <div class="floating-nav-next floating-nav-item"><?php echo get_next_posts_link( 'NEXT', $loop->max_num_pages ); ?></div>
-                        <div class="floating-archives-button"><a href="/"></a></div>
+                        <div class="floating-archives-button"><a href="/categories"></a></div>
                     </div>                    
                         
                     <?php 

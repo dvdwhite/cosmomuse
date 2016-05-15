@@ -63,7 +63,7 @@
                             'tag__in' => $tag_ids,  
                             'post__not_in' => array($post->ID),  
                             'posts_per_page'=>4, // Number of related posts to display.  
-                            'caller_get_posts'=>1  
+                            'ignore_sticky_posts'=>1  
                             );  
 
                             $my_query = new wp_query( $args );  
@@ -75,15 +75,13 @@
                             <div class="relatedthumb eq-ht col-4">  
                                 <a rel="external" href="<? the_permalink()?>">
                                 <?php
-                                if ( has_post_thumbnail() ) {
-                                    the_post_thumbnail('medium');
-                                }else{
-                                    //echo '<img src="http://placehold.it/229x100&text=View+Article"/>';
-                                }
+                                    $featured_thumb = rwmb_meta( 'cosmo_post_thumb', 'type=image' );
+                                    foreach ( $featured_thumb as $image ) {
+                                        echo "<a href='" . get_the_permalink() . "'><img src='{$image['url']}' /></a>";
+                                    }  
                                 ?>
                                 </a>
-                                 <a class="title" rel="external" href="<? the_permalink()?>"><?php the_title(); ?></a><br />
-                                <span class="related-date"><?php echo get_the_date(); ?></span>
+                                 <a class="title" rel="external" href="<? the_permalink()?>"><?php the_title(); ?></a>
                             </div>  
 
                             <?php }  
@@ -91,10 +89,10 @@
                             $post = $orig_post;  
                             wp_reset_query();  
                             ?>
-                        </div>    <!-- End Four Columns Wrapper-->
+                        </div><br clear="all" />    <!-- End Four Columns Wrapper-->
                     </div> <!-- End related posts by tag -->                
 
-                    <hr />
+                    
 
                       <?php
                     }

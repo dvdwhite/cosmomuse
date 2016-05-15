@@ -57,8 +57,15 @@ $(function() {
     if ($('.floating-nav-item').contents().length != 0) {
         console.log('true');
         $(this).css('display','block');
-    }    
+    }  
     
+    
+    /*
+    $('.comment-content li strong').remove();
+    var commentSign = $('.comment-content li').text();
+    console.log(commentSign);
+    $('.comment-author img').attr('src','/wp-content/themes/cosmomuse/images/signs/' + commentSign + '.png'); 
+    $('.comment-author img').attr('srcset','/wp-content/themes/cosmomuse/images/signs/' + commentSign + '.png'); */
     
     
     // Get the current sign and display the appropriate dates

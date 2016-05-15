@@ -976,6 +976,7 @@ a {
 .search-container {
     display: none;
     background: #fff;
+    padding: 0 0 20px 0;
 }
 
 .search-container label {
@@ -1257,7 +1258,7 @@ a {
 .tile-break {
     clear: both;
     display: block;
-    width: 94%;
+    width: 97%;
     margin: 30px auto 0 auto;
     border-top:1px solid #fbe8e2;
 }
@@ -1434,6 +1435,16 @@ a {
     font-family: 'BrandonGrotesque-Regular';
 }
 
+.connect-with-us {
+    font-family: 'BrandonGrotesque-Regular';
+}
+
+.connect-copy {
+    position: relative;
+    top: -3px;
+    font-size: 18px;
+}
+
 .content-column {
     padding:10px 6px;
 }
@@ -1500,6 +1511,14 @@ a {
     font-family: 'BrandonGrotesque-Regular';
 }
 
+#comments a {
+    color: #404040;
+}
+
+#comments a:hover {
+    text-decoration: underline;
+}
+
 #comments h2 {
     font-size: 32px;
 }
@@ -1553,6 +1572,7 @@ a {
     text-transform: uppercase;
     font-size: 14px;
     font-weight: bold;
+    display: block;
 }
 
 .comment-respond input {
@@ -1562,7 +1582,11 @@ a {
 
 #respond {
     text-align: left;
-    padding: 0 40px;
+    padding: 0 40px 0 65px;
+}
+
+#respond h3 {
+    font-size: 1.6em;
 }
 
 /* --------- RELATED POSTS ----------- */
@@ -1961,7 +1985,15 @@ a {
     
     .entry-content {
         margin: 80px 30px 0 30px;
-    }   
+    }
+    
+    .page-content {
+        margin: 26px 30px 0 30px;
+    }
+    
+    .page-top-margin h1 {
+        padding: 50px 0 0 0;
+    }
     
     .tiles img {
         width: 100%;
@@ -2015,7 +2047,7 @@ a {
     
     .comment-respond {
         display: inline;
-        float: right;
+        float: left;
         width: 45%;
         text-align: left;
     }  
@@ -2357,3 +2389,168 @@ a {
     }    
     
 }
+
+
+
+
+
+
+
+
+
+
+.eq-ht-wrapper{
+    margin: 0 auto;
+    max-width: 1024px;   
+    /*padding: 1em 0 3em 0;*/
+   	text-align: center;
+}
+.eq-ht{
+  width: 98%;
+  float: left;
+  /*border: 2px solid #ccc;*/
+  margin: 10px 1%;
+  padding: 2%;
+}
+.eq-ht a:hover{
+	text-decoration:none;
+}
+.eq-ht img{
+	width: 100%;
+}
+.eq-ht h3{
+	text-transform:uppercase;
+	color: #cc0000;
+	font-size: 1.5em;
+	font-family: 'Open Sans';
+	font-weight: 100;
+	margin: 1em 0 0.5em 0;
+}
+/* Keep Learn More Aligned to the Bottom */
+
+.eq-ht.btn-present{
+	position:relative;
+	padding-bottom: 4.5em !important;
+}
+
+.eq-ht.btn-present .btn-here{
+	width:100%;
+	position:absolute;
+	bottom:1em;
+	left:-.1%;
+}
+
+.lt-grey{
+	background-color: #E1E1E1;
+	border-color: #E1E1E1;
+}
+/*.eq-ht.col-2.gray-border-txt h3{
+	color:#000;
+	text-align: left;
+	margin: 0;
+	padding: 0;
+}*/
+.eq-ht.dk-grey h3{
+	text-align: center;
+	margin: 1em 0 0.5em 0;
+	color: #fff;
+}
+.eq-ht.dk-grey{
+	padding: 1.4em;
+	color: #fff;
+	background-color: #333333;
+	border-color:#333333;
+} 
+.eq-ht.dk-grey img{
+	width: 100%;
+	/*border: 1px solid #e1e1e1;*/
+	padding: 0;
+}
+@media all and (min-width: 766px) {
+	.eq-ht{
+	  width: 100%;
+	  float: left;
+	  /*border: 2px solid #E1E1E1;*/
+	  margin: 10px 1%;
+	  padding: 1.5%;
+	}
+	.eq-ht.col-2{width: 48%;}
+	.eq-ht.col-3{width: 31.3%;}
+	.eq-ht.col-4{width: 23%;}
+	.eq-ht.col-6{width: 14.6666666%;}
+	}
+	.eq-ht img.col-2-thumb{
+		max-width: 150px;
+		max-height: 150px;
+		float: left;
+		margin: 0 1em 0 0;
+	}
+	.lt-grey{
+	background-color: #E1E1E1;
+	}
+	.no-border{
+		border-color:transparent;
+	}
+@media all and (min-width: 480px) and (max-width: 900px) {
+	.eq-ht.col-4{width: 48%}/*stack 4 column to 2 column at this sceen size*/
+}  
+@media all and (min-width: 766px) and (max-width: 900px) {
+	.eq-ht.col-6{width: 31.3%}/*stack 6 column to 3 column at this sceen size*/
+} 
+@media all and (min-width: 480px) and (max-width: 766px) {
+	.eq-ht.col-6{width: 48%}/*stack 6 column to 2 column at this sceen size*/
+}  
+@media \0screen\,screen\9 {/*IE8 and lower*/
+	.eq-ht.dk-grey img{
+		width: auto;
+	}
+	.eq-ht{
+	  width: 100%;
+	  float: left;
+	  /*border: 2px solid #E1E1E1;*/
+	  margin: 10px 1%;
+	  padding: 1.5%;
+	}
+	.eq-ht img{
+	max-width: 100%;
+    height: auto;
+    width: auto\9; /* ie8 */
+	}
+	.eq-ht.col-2{width: 48%;}
+	.eq-ht.col-3{width: 31.3%;}
+	.eq-ht.col-4{width: 23%;}
+	.eq-ht.col-6{width: 14.6666666%;}
+	}
+	.eq-ht img.col-2-thumb{
+		max-width: 150px;
+		max-height: 150px;
+		float: left;
+		margin: 0 1em 0 0;
+	}
+	
+}  
+
+.post-body form {
+    max-width: 340px;
+    margin: 0 auto;
+}
+
+form {
+    text-align: left;
+    margin: 0 auto;
+    max-width: 640px;
+}
+
+form span {
+    font-family: 'BrandonGrotesque-Regular'; 
+    text-transform: uppercase;
+    text-align: left;
+}
+
+input, textarea {
+    max-width: 640px;
+    width: 100%;
+}
+
+
+.addtoany_content_bottom { background: url(images/horizontal-rule-circles.png) no-repeat; }
