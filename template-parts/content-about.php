@@ -26,27 +26,76 @@
             
             <div class="about-wrapper">
                 <div class="about-photo"> 
-                    <img src="http://cosmomuse.com/wp-content/uploads/2016/02/allie-bio-pic.jpg" />
+                    <?php
+                        $lead_photos = rwmb_meta( 'cosmo_about_lead_photo' );
+                        //var_dump ( $lead_photos );
+                        if ( !empty( $lead_photos ) ) {
+                            foreach ( $lead_photos as $lead_photo ) {
+                                echo "<img src='{$lead_photo['full_url']}' /></a>";
+                            }
+                        }
+                    ?>
+                    <!--<img src="http://cosmomuse.com/wp-content/uploads/2016/02/allie-bio-pic.jpg" />-->
                 </div>
                 <div class="about-bio">
-                    <h1>ALLIE COUCH<br /><span style="font-size:14px;">FOUNDER & PRESIDENT</span></h1>
+                    <h1><?php echo rwmb_meta( 'cosmo_about_lead_name' ); ?><br /><span style="font-size:14px;"><?php echo rwmb_meta( 'cosmo_about_lead_title' ); ?></span></h1>
                     
-                    <p>Allie has been an avid student of astrology since the age of 19 and has always been a bit of a bohemian. Along with a background in fashion design with experience at brands such as Patagonia, she most recently served as the executive director of an event design firm in Salt Lake City and Park City. She has also enjoyed sitting on the steering committee for TEDx Salt Lake City and is passionate about community and innovative thinking. Allie is visual in nature and hopes to bring beautiful inspiration to Cosmo Muse through lots of imagery that gives a magical feel, while on a subtle level, opening up dialog about the use of astrology as a seasonal lifestyle guide. Having lived in several countries and states, Allie has a thirst for exploration and learning about what makes people and cultures tick, with a love of humanity.</p>
-
-<p>*Sun in Virgo, Moon in Libra, Sagittarius Rising & Chart Ruler in Cancer</p>
+                    <p><?php echo rwmb_meta( 'cosmo_about_lead_bio' ); ?></p>
                 </div>
             </div>
             
+            
+            
+            
+            
+<!-- Comment out the contributors section for quick workaround -- Need to fix this    
+            <?php
+                $members = rwmb_meta( 'cosmo_members' );
+                if ( ! empty( $members ) ) {
+                    foreach ( $members as $member ) { 
+            
+                        $member_photos = $member['cosmo_about_member_photo']; 
+                        var_dump ( $member_photos[0] );
+?>
+                        <div class="about-wrapper">
+                            <div class="about-photo"> 
+                                
+                                <?php
+                                    //$member_photos = $member['cosmo_about_member_photo']; 
+                                    //var_dump ( $member_photos );
+                                ?>                                
+                                
+                            </div>
+                            <div class="about-bio">
+                                <h1><?php echo $member['member_name'] ?><br /><span style="font-size:14px;"><?php echo $member['member_title'] ?></span></h1>
+
+                                <p><?php echo $member['member_bio'] ?></p>
+                            </div>
+                        </div>                        
+                    
+                    <?php }
+                }
+            ?>
+
+-->
+            
             <div class="about-wrapper">
                 <div class="about-photo"> 
-                    <img src="http://cosmomuse.com/wp-content/uploads/2016/02/brooke-bio-pic.jpg" />
+                    <?php
+                        $member_photos = rwmb_meta( 'cosmo_about_member_photo' ); 
+                        if ( !empty( $member_photos ) ) {
+                            foreach ( $member_photos as $member_photo ) {
+                                echo "<img src='{$member_photo['full_url']}' /></a>";
+                            }
+                        }
+                    ?>       
                 </div>
                 <div class="about-bio">
                     <h1>BROOKE MUSAT<br /><span style="font-size:14px;">RESIDENT YOGI</span></h1>
                     
                     <p>Training as a classical ballerina till she was 18, Brooke enjoyed finding ways to communicate stories and emotions through movement. Looking for ways to help deal with her anxiety after Brooke’s father passed away, she found yoga. One downward dog and a few sun salutations and she was hooked! Brooke received her 200 hour yoga teacher training in 2010. Recognizing both the healing powers and communicative abilities of yoga, Brooke focused her Masters research on teaching individuals about place through the art of yoga. An Aquarius at heart, Brooke is always looking for ways to inject creativity into her yoga practice. For Cosmo Muse, she enjoys customizing yoga sequences for the different astrological signs. When she’s not practicing yoga Brooke, enjoys recreating in the mountains of Utah with her fiancé and black lab Harley.</p>
                 </div>
-            </div>            
+            </div>             
             
             <br clear="all" />
             

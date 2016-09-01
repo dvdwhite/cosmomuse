@@ -1304,7 +1304,7 @@ a {
     padding: 0 0 20px 0;
 }
 
-.category {
+.category, .category-name {
     text-transform: uppercase;
     margin: 0 auto;
     width: 140px;
@@ -1595,6 +1595,15 @@ a {
     text-align: center;
 }
 
+.relatedposts a {
+    font-family: 'BrandonGrotesque-Regular';
+    color: #404040;
+}
+
+.relatedposts a.title:hover {
+    text-decoration: underline;
+}
+
 .relatedposts h2 {
     
 }
@@ -1730,6 +1739,18 @@ a {
 .about-photo {
     display: inline;
     float:left;
+    padding: 0 40px 0 0;
+}
+
+.about-wrapper-sm {
+    display:inline-block;
+    padding: 40px 20px;
+}
+
+.about-photo-sm {
+    display: inline;
+    float:left;
+    width:200px;
     padding: 0 40px 0 0;
 }
 
@@ -2233,7 +2254,7 @@ a {
         font-family: 'BrandonGrotesque-Regular';
         font-size: 18px;
         line-height: 74px;
-        letter-spacing: 0.1em;
+        letter-spacing: 0.05em;
     }
     
     .home-horoscope-copy {
@@ -2269,7 +2290,7 @@ a {
         color:#525454;
     }
     
-    .small-banner .category {
+    .small-banner .category, .small-banner .category-name {
         padding: 2px 14px;
     }
     

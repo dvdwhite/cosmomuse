@@ -55,7 +55,7 @@ $(function() {
     
 
     if ($('.floating-nav-item').contents().length != 0) {
-        console.log('true');
+        // console.log('true');
         $(this).css('display','block');
     }  
     

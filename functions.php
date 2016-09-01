@@ -119,8 +119,8 @@ function cosmomuse_scripts() {
     // deregister default jQuery included with Wordpress
     wp_deregister_script( 'jquery' );
     wp_enqueue_script( 'jquery', get_template_directory_uri() . '/js/jquery-1.11.2.min.js', array(), '20150705', true );
-
-	wp_enqueue_script( 'cosmomuse-javascript', get_template_directory_uri() . '/js/global.js', array(), '20150705', true );
+    
+    wp_enqueue_script( 'cosmomuse-javascript', get_template_directory_uri() . '/js/global.js', array(), '20150705', true );
 
 	wp_enqueue_script( 'cosmomuse-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
 
@@ -638,19 +638,127 @@ function cosmo_about_meta_boxes( $meta_boxes )
 		// List of meta fields
 		'fields'     => array(
             
-			// ALLIE BIO TEXTAREA
+
+			// PHOTO
 			array(
-				'name' => __( 'Allie', 'cosmo_about_' ),
-				'desc' => __( 'Allie Bio', 'cosmo_about_' ),
-				'id'   => "{$prefix}allie_bio",
+				'name'             => __( 'Lead Photo', 'cosmo_about_' ),
+				'id'               => "{$prefix}lead_photo",
+				'type'             => 'image_advanced',
+				'max_file_uploads' => 1,
+			),            
+            
+			// NAME
+			array(
+				// Field name - Will be used as label
+				'name'  => __( 'Lead Name', 'cosmo_about_' ),
+				// Field ID, i.e. the meta key
+				'id'    => "{$prefix}lead_name",
+				'type'  => 'text',
+			),
+            
+            // TITLE
+			array(
+				// Field name - Will be used as label
+				'name'  => __( 'Lead Title', 'cosmo_about_' ),
+				// Field ID, i.e. the meta key
+				'id'    => "{$prefix}lead_title",
+				'type'  => 'text',
+			),  
+            
+            // BIO
+			array(
+				'name' => __( 'Lead Bio', 'cosmo_about_' ),
+				'id'   => "{$prefix}lead_bio",
 				'type' => 'textarea',
 				'cols' => 20,
-				'rows' => 4,
+				'rows' => 8,
 			),  
+            
+            // Group
+            array(
+                'name' => 'Cosmo Team', // Optional
+                'id' => 'cosmo_members',
+                'type' => 'group',
+				// CLONES: Add to make the field cloneable (i.e. have multiple value)
+				'clone' => true,
+                // List of sub-fields
+                'fields' => array(
+
+                    // PHOTO
+                    array(
+                        'name' => __( 'Member Photo', 'cosmo_about_' ),
+                        'id'   => "{$prefix}member_photo",
+                        'type' => 'image_advanced',
+				        'max_file_uploads' => 1,
+                    ),                    
+                    // NAME
+                    array(
+                        // Field name - Will be used as label
+                        'name'  => __( 'Member Name', 'cosmo_about_' ),
+                        // Field ID, i.e. the meta key
+                        'id'    => "member_name",
+                        'type'  => 'text',
+                    ),
+
+                    // TITLE
+                    array(
+                        // Field name - Will be used as label
+                        'name'  => __( 'Member Title', 'cosmo_about_' ),
+                        // Field ID, i.e. the meta key
+                        'id'    => "member_title",
+                        'type'  => 'text',
+                    ),  
+
+                    // BIO
+                    array(
+                        'name' => __( 'Member Bio', 'cosmo_about_' ),
+                        'id'   => "member_bio",
+                        'type' => 'textarea',
+                        'cols' => 20,
+                        'rows' => 4,
+                    ),
+                ),
+            ),            
                         
 
 		)
 	);    
 	return $meta_boxes;
 }
+
+
+/*CREATE*/
+function custom_taxonomies_sign(){
+  // Add new taxonomy, make it hierarchical (like categories)
+  $labels = array(
+    'name'              => _x( 'Signs', 'taxonomy general name' ),
+    'singular_name'     => _x( 'Sign', 'taxonomy singular name' ),
+    'search_items'      => __( 'Search Signs' ),
+    'all_items'         => __( 'All Signs' ),
+    'parent_item'       => __( 'Parent Sign' ),
+    'parent_item_colon' => __( 'Parent Sign:' ),
+    'edit_item'         => __( 'Edit Sign' ),
+    'update_item'       => __( 'Update Sign' ),
+    'add_new_item'      => __( 'Add New Sign' ),
+    'new_item_name'     => __( 'New Sign Name' ),
+    'menu_name'         => __( 'Signs' ),
+  );
+
+  $args = array(
+    'hierarchical'      => true,
+    'labels'            => $labels,
+    'show_ui'           => true,
+    'show_admin_column' => true,
+    'query_var'         => true,
+    'rewrite'           => array( 'slug' => 'sign' ),
+    "show_in_rest"    => true,
+  );
+
+  register_taxonomy( 'sign', 'post', $args );
+
+
+}
+
+add_action('init', 'custom_taxonomies_sign');
+
 

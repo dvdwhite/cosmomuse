@@ -14,7 +14,7 @@
         <div class="horoscope-banner-wrapper">
             <div class="horoscope-banner-bg">
                 <div class="horoscope-large-bg">
-                    <div class="horoscope-banner-title"><h1>WEEKLY HOROSCOPE</h1></div>
+                    <div class="horoscope-banner-title"><h1>MONTHLY HOROSCOPE</h1></div>
                     <div class="horoscope-content-wrapper">
                         <div class="horoscope-content-sign <?php echo rwmb_meta( 'cosmo_horoscope_sign' ); ?>">
                             <div class="horoscope-sign"><img src="/wp-content/themes/cosmomuse/images/signs/<?php echo rwmb_meta( 'cosmo_horoscope_sign' ); ?>.png" /></div>
