@@ -51,7 +51,7 @@ get_header(); ?>
                         ?>                        
                         
                         <div class="home-banner small-banner banner-position">
-                            <div class="category-name <?php echo $this_cat_name; ?>">
+                            <div class="cm-category-name <?php echo $this_cat_name; ?>">
                                 <?php echo $this_cat_name; ?>
                             </div>
                             <div class="thumbnail-image">
@@ -96,7 +96,7 @@ get_header(); ?>
                         ?>                        
                         
                         <div class="home-banner small-banner banner-position">
-                            <div class="category-name <?php echo $this_cat_name; ?>">
+                            <div class="cm-category-name <?php echo $this_cat_name; ?>">
                                 <?php echo $this_cat_name; ?>
                             </div>
                             <div class="thumbnail-image">
@@ -139,7 +139,7 @@ get_header(); ?>
                     ?>
 
                     <div class="home-banner banner-position feature-banner-margin">
-                        <div class="category-name <?php echo $this_cat_name; ?>">
+                        <div class="cm-category-name <?php echo $this_cat_name; ?>">
                             <?php echo $this_cat_name; ?>
                         </div>
                         <div class="title-sign-container ink-<?php echo $this_cat_name; ?>">
@@ -176,7 +176,7 @@ get_header(); ?>
                         ?>
                         
                         
-                            <div class="home-horoscope-title">MONTHLY HOROSCOPE</div>   
+                            <div class="home-horoscope-title">MONTHLY HOROSCOPES</div>   
                             <div class="home-horoscope-copy"><?php echo rwmb_meta( 'cosmo_home_horoscope' ); ?><span class="arrow"></span></div>
                         </a>    
                     </div>                    
@@ -202,7 +202,7 @@ get_header(); ?>
                         ?>                        
                         
                         <div class="home-banner small-banner banner-position">
-                            <div class="category-name <?php echo $this_cat_name; ?>">
+                            <div class="cm-category-name <?php echo $this_cat_name; ?>">
                                 <?php echo $this_cat_name; ?>
                             </div>
                             <div class="thumbnail-image">
@@ -247,7 +247,7 @@ get_header(); ?>
                         ?>                        
                         
                         <div class="home-banner small-banner banner-position">
-                            <div class="category-name <?php echo $this_cat_name; ?>">
+                            <div class="cm-category-name <?php echo $this_cat_name; ?>">
                                 <?php echo $this_cat_name; ?>
                             </div>
                             <div class="thumbnail-image">
@@ -307,7 +307,7 @@ get_header(); ?>
                     ?>
 
                     <div class="post-banner">
-                        <div class="category-name <?php echo $category[0]->slug; ?>">
+                        <div class="cm-category-name <?php echo $category[0]->slug; ?>">
                             <?php echo $category[0]->cat_name; ?>
                         </div>
                         <div class="title-sign-container ink-<?php echo $category[0]->slug; ?>">

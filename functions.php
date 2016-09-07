@@ -674,6 +674,8 @@ function cosmo_about_meta_boxes( $meta_boxes )
 				'rows' => 8,
 			),  
             
+            
+            /*
             // Group
             array(
                 'name' => 'Cosmo Team', // Optional
@@ -719,7 +721,7 @@ function cosmo_about_meta_boxes( $meta_boxes )
                     ),
                 ),
             ),            
-                        
+            */            
 
 		)
 	);    

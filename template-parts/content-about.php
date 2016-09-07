@@ -38,7 +38,7 @@
                     <!--<img src="http://cosmomuse.com/wp-content/uploads/2016/02/allie-bio-pic.jpg" />-->
                 </div>
                 <div class="about-bio">
-                    <h1><?php echo rwmb_meta( 'cosmo_about_lead_name' ); ?><br /><span style="font-size:14px;"><?php echo rwmb_meta( 'cosmo_about_lead_title' ); ?></span></h1>
+                    <h2><?php echo rwmb_meta( 'cosmo_about_lead_name' ); ?><br /><span style="font-size:14px;"><?php echo rwmb_meta( 'cosmo_about_lead_title' ); ?></span></h2>
                     
                     <p><?php echo rwmb_meta( 'cosmo_about_lead_bio' ); ?></p>
                 </div>
@@ -78,24 +78,40 @@
             ?>
 
 -->
+            <br clear="all" /><br clear="all" />
+            <div class="tile-break"> </div>
+            
+            <h2>Cosmo Muses</h2>
             
             <div class="about-wrapper">
-                <div class="about-photo"> 
-                    <?php
-                        $member_photos = rwmb_meta( 'cosmo_about_member_photo' ); 
-                        if ( !empty( $member_photos ) ) {
-                            foreach ( $member_photos as $member_photo ) {
-                                echo "<img src='{$member_photo['full_url']}' /></a>";
-                            }
-                        }
-                    ?>       
-                </div>
-                <div class="about-bio">
-                    <h1>BROOKE MUSAT<br /><span style="font-size:14px;">RESIDENT YOGI</span></h1>
-                    
-                    <p>Training as a classical ballerina till she was 18, Brooke enjoyed finding ways to communicate stories and emotions through movement. Looking for ways to help deal with her anxiety after Brooke’s father passed away, she found yoga. One downward dog and a few sun salutations and she was hooked! Brooke received her 200 hour yoga teacher training in 2010. Recognizing both the healing powers and communicative abilities of yoga, Brooke focused her Masters research on teaching individuals about place through the art of yoga. An Aquarius at heart, Brooke is always looking for ways to inject creativity into her yoga practice. For Cosmo Muse, she enjoys customizing yoga sequences for the different astrological signs. When she’s not practicing yoga Brooke, enjoys recreating in the mountains of Utah with her fiancé and black lab Harley.</p>
-                </div>
-            </div>             
+
+                <div class="about-wrapper-sub">
+                    <div class="about-photo-sub"> 
+                        <img src="http://cosmomuse.com/wp-content/uploads/2016/02/brooke-bio-pic.jpg" />
+                    </div>
+                    <div class="about-bio-sub">
+                        <h3>BROOKE MUSAT<br /><span style="font-size:14px;">THE YOGI MUSE</span></h3>
+
+                        <p>Training as a classical ballerina till she was 18, Brooke enjoyed finding ways to communicate stories and emotions through movement. Looking for ways to help deal with her anxiety after Brooke’s father passed away, she found yoga. One downward dog and a few sun salutations and she was hooked! Brooke received her 200 hour yoga teacher training in 2010. Recognizing both the healing powers and communicative abilities of yoga, Brooke focused her Masters research on teaching individuals about place through the art of yoga. An Aquarius at heart, Brooke is always looking for ways to inject creativity into her yoga practice. For Cosmo Muse, she enjoys customizing yoga sequences for the different astrological signs. When she’s not practicing yoga Brooke, enjoys recreating in the mountains of Utah with her fiancé and black lab Harley.</p>
+                        
+                        <p>*Sun in Aquarius, Moon in Sagittarius & Cancer Rising</p>
+                    </div>
+                </div>             
+                
+                <div class="about-wrapper-sub">
+                    <div class="about-photo-sub"> 
+                        <img src="http://cosmomuse.com/wp-content/uploads/2016/09/ash-bio-photo.jpg" />
+                    </div>
+                    <div class="about-bio-sub">
+                        <h3>ASH BONELLI<br /><span style="font-size:14px;">THE COUNSELOR MUSE</span></h3>
+
+                        <p>Ash Bonelli is an astrologer, writer and private yoga instructor located in Seattle. She has worked in the holistic field for the past 13 years with additional studies in photography. She brings her education, intuition and creativity to all of her client sessions. She focuses her work with women to show them how to better understand themselves, their lives and how to become more empowered. Her love of alternative healing blossomed when she received a reflexology chart at age 12 and began working on her parents. It was a natural course in life to be of service in some way. She believes everything begins within and we each have the power to operate from our best selves. She is thrilled to be sharing astrology with the readers of CosmoMuse!</p>
+
+                        <p>*Sun in Pisces, Moon in Capricorn & Libra Rising</p>
+                    </div>
+                </div>                
+                
+            </div>
             
             <br clear="all" />
             

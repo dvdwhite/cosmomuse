@@ -1304,7 +1304,7 @@ a {
     padding: 0 0 20px 0;
 }
 
-.category, .category-name {
+.cm-category, .cm-category-name {
     text-transform: uppercase;
     margin: 0 auto;
     width: 140px;
@@ -1732,14 +1732,27 @@ a {
 
 .about-wrapper {
     display:block;
-    padding: 40px 40px 40px 20px;
+    padding: 20px;
     clear: both;
+}
+
+.about-wrapper h2, .about-wrapper h3 {
+    margin-top: 0;
+}
+
+.about-wrapper h2 {
+    font-size: 1.8em;
 }
 
 .about-photo {
     display: inline;
     float:left;
-    padding: 0 40px 0 0;
+    /*padding: 0 40px 0 0;*/
+    width: 100%;
+}
+    
+.about-photo img {
+    width: 100%;
 }
 
 .about-wrapper-sm {
@@ -1756,7 +1769,29 @@ a {
 
 .about-bio {
     display: inline;
+    float: right;
+    text-align: left;
+    width: 100%;
+}
+
+.about-photo-sub {
+    display: inline;
     float: left;
+    width: 100%;
+}
+
+.about-wrapper-sub {
+    display: block;
+}
+
+.about-photo-sub img {
+    width: 100%;
+}
+
+.about-bio-sub {
+    display: inline;
+    float: left;
+    width: 100%;
     text-align: left;
 }
 
@@ -2088,6 +2123,28 @@ a {
     .horoscope-content-description {
         margin: 26px 26px 16px 16px;
         text-align: left;
+    }  
+    
+    .about-wrapper {
+        padding: 40px 20px;
+    }
+    
+    .about-photo {
+        width: 35%;
+    }
+    
+    .about-bio {
+        width: 60%;
+    }
+    
+    .about-photo-sub {
+        width: 35%;
+        clear: both;
+    }
+    
+    .about-bio-sub {
+        width: 60%;
+        float: right;
     }    
     
 }
@@ -2110,9 +2167,24 @@ a {
         top: 272px;
     }    
     
-    .about-bio {
+    /*.about-bio {
         width: 60%;
+    }*/   
+    
+    .about-wrapper-sub {
+        display: inline;
     }
+    
+    .about-photo-sub {
+        width: 15%;
+        clear: none;
+    }
+    
+    .about-bio-sub {
+        width: 35%;
+        padding: 0 32px 0 16px;
+        float: left;
+    }    
     
 }
 
@@ -2290,7 +2362,7 @@ a {
         color:#525454;
     }
     
-    .small-banner .category, .small-banner .category-name {
+    .small-banner .cm-category, .small-banner .cm-category-name {
         padding: 2px 14px;
     }
     

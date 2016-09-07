@@ -14,7 +14,7 @@
 	<header class="entry-header">
             
         <div class="post-banner">
-            <div class="category <?php echo $category[0]->slug; ?>">
+            <div class="cm-category <?php echo $category[0]->slug; ?>">
                 <?php echo $category[0]->cat_name; ?>
             </div>
             <div class="title-sign-container ink-<?php echo $category[0]->slug; ?>">
